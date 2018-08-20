@@ -2,3 +2,25 @@ joseph:
   name: Joseph Tandingan
   email: joseph@example.com
   password_digest: <%= User.digest('password') %>
+
+archer:
+  name: Legolass Greenleaf
+  email: duke@example.gov
+  password_digest: <%= User.digest('password') %>
+
+lana:
+  name: Daenarys Targaryen
+  email: khaleesi@example.gov
+  password_digest: <%= User.digest('password') %>
+
+malory:
+  name: Jon Snow
+  email: jonsnow@example.gov
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
